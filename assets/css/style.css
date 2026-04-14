@@ -25,6 +25,7 @@ body {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 1.25rem;
 }
 
 /* ===== section 간격 공통 ===== */
@@ -61,7 +62,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #1E4DB4;
-  letter-spacing: 0.1em;
+  letter-spacing: 5%;
 }
 .nav-menu {
   display: flex;
@@ -163,11 +164,11 @@ body {
   max-width: 28rem; /* 448px */
   border-radius: 1.5rem;
   background: linear-gradient(135deg, #FF9799 0%, #1E4DB4 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: width 1.5s ease;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 1.5s ease;
+  overflow: hidden;
 }
 
 .main-title-box.active {
@@ -195,6 +196,10 @@ body {
   font-weight: 400;
 }
 
+.sub-text strong {
+  color: #1E4DB4;
+}
+
 /* ===== about 영역 ===== */
 .about-section {
   width: 100%;
@@ -203,11 +208,10 @@ body {
 }
 .about-section .container {
   max-width: 928px;
-  margin: 0 auto;
 }
 
 .about-top {
-    width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -251,10 +255,17 @@ body {
 }
 .about-img {
   width: 40%;
-  height: 100%;
+  min-height: 25rem;
   background: #aaa;
-  min-height: 300px;
 }
+
+.about-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-bottom {
   margin-top: 5rem;
 }
@@ -273,8 +284,8 @@ body {
   justify-content: center;
 }
 .about-desc-img {
-  width: 180px;
-  height: 180px;
+  width: 40%;
+  height: 28.125rem;
   background: #ccc;
   border-radius: 1rem;
   flex-shrink: 0;
@@ -352,7 +363,6 @@ body {
 .project-section {
   background: #1E4DB4;
   width: 100%;
-  color: #fff;
 }
 .project-section .container {
   max-width: 1200px;
@@ -426,6 +436,123 @@ body {
   opacity: 0.8;
 }
 
+.btn-wrap {
+  padding-top: 3.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.more-btn {
+  text-align: center;
+  display: block;
+  font-size: 1.5625rem;
+  font-weight: 700;
+  padding: 0.625rem 1.875rem;
+  width: 100%;
+  max-width: 7.5rem;
+  border: 1px solid #fff;
+  border-radius: 6.25rem;
+  color: #fff;
+}
+
+.more-btn:hover {
+  background-color: #fff;
+  color: #1F1840;
+}
+
+.contact {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-family: "Shrikhand", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1F1840;
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.contact-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-texts p {
+  font-size: 1.875rem;
+  color: #1F1840;
+}
+
+.contact-texts p + p {
+  font-size: 1.875rem;
+  margin-top: 20px;
+}
+
+.contact-info {
+  margin-top: 60px;
+}
+
+.email-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-info img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.contact-info a {
+  font-size: 1.25rem;
+  color: #1F1840;
+  font-weight: 500;
+}
+
+.contact-cta {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 40px;
+  border: 1px solid #1F1840;
+  padding: 10px 30px;
+  border-radius: 6.25rem;
+  color: #1F1840;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-cta:hover {
+  background-color: #1F1840;
+  color: #ffffff;
+}
+
+footer {
+  width: 100%;
+  background-color: #1F1840;
+  padding: 40px 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
 
 /* ===== 반응형 ===== */
@@ -456,7 +583,7 @@ body {
 
   .about-img, .about-desc-img {
     width: 100%;
-    min-height: 200px;
+    height: 250px;
     border-radius: 1rem;
   }
 
@@ -477,18 +604,17 @@ body {
   .nav-toggle {
     display: flex;
   }
+  
+  .skill-desc {
+    margin-bottom: 2.5rem;
+  }
 
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-  .project-card-img {
-    height: 120px;
-  }
   .project-card {
     padding: 1.2rem 0.7rem 1.2rem 0.7rem;
   }
   .project-title {
     font-size: 2rem;
+    margin-bottom: 2.5rem;
   }
   .project-card-main {
     font-size: 1.3rem;
@@ -496,17 +622,82 @@ body {
   .project-card-sub {
     font-size: 1rem;
   }
+
+  .more-btn {
+    font-size: 1.25rem;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-texts p {
+    font-size: 1.5625rem;
+  }
+
+  .contact-texts p + p {
+    font-size: 1.5625rem;
+  }
+
+  .contact-info {
+    gap: 12px;
+  }
+
+  
 }
 
 @media (max-width: 600px) {
+  .sec-pd {
+    padding-top: 6.25rem; /* 150px */
+    padding-bottom: 6.25rem;
+  }
+
   .main-title {
     font-size: 2rem;
     padding: 1rem 1.5rem;
   }
   .sub-text {
     font-size: 1rem;
+    margin-top: 2.5rem;
   }
   .main-title-box {
     max-width: 90vw;
+  }
+
+  footer {
+    font-size: 0.9375rem;
+  }
+
+}
+
+@media (max-width: 514px) {
+  .logo {
+    font-size: 1.5625rem;
+  }
+
+  .project-section .container {
+    align-items: stretch;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .project-card-img {
+    height: 15.625rem;
+  }
+
+    .contact-texts p {
+    font-size: 1.25rem;
+  }
+
+  .contact-texts p + p {
+    font-size: 1.25rem;
   }
 }
