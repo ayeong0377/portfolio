@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
   // 스크롤 시 메뉴 배경색 변경
-  const mainNav = document.querySelector('.main-nav');
+  const mainNav = document.querySelector('.header');
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       mainNav.classList.add('scrolled');

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AY’s Portfolio</title>
+    <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shrikhand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/header-footer.css">
+  <link rel="stylesheet" href="./assets/css/about.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+              <div class="nav-inner">
+                <h1 class="logo">
+                    <a href="/">
+                        AYEONG BAE
+                    </a></h1>
+                <ul class="nav-menu">
+                  <li><a href="./index.html">Home</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+              </div>
+              <div class="mobile-menu">
+                <button class="close-menu" aria-label="메뉴 닫기">&times;</button>
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+      <!-- about -->
+      <section class="about sec-pd" id="about">
+        <div class="container">
+          <h2 class="about-title" data-aos="fade-up" data-aos-duration="1000">About Me</h2>
+          <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="about-image">
+              <img src="./assets/images/about.png" alt="About me image">
+            </div>
+            <div class="about-texts">
+              <p>사용자의 입장에서 먼저 생각하고, 더 나은 경험으로 연결하는 과정을 중요하게 생각합니다.
+              과정에서의 소통을 바탕으로 다양한 의견을 수용하고, 이를 실제 결과물에 구현 하는 데 집중합니다.</p>
+              <p>또한 구조 설계 단계부터 인터랙션 구현까지 전반적인 과정을 이해하고, 사용자 입장에서 자연스러운 경험을 만드는 것을 목표로 합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- strength -->
+      <section class="strength sec-pd" id="strength">
+        <div class="container">
+          <h2 class="strength-title" data-aos="fade-up" data-aos-duration="1000">Strength</h2>
+          <div class="strength-cards" data-aos="fade-up" data-aos-duration="1000">
+            <article class="strength-card">
+              <img src="./assets/images/strength-icon1.svg" alt="구조설계 아이콘" class="strength-icon">
+              <h3>01. 구조설계</h3>
+              <p>사용자의 흐름을 고려하여 정보 구조를 설계하고, <br>
+              직관적인 UI로 연결하는 데 강점이 있습니다.</p>
+            </article>
+            <article class="strength-card">
+              <img src="./assets/images/strength-icon2.svg" alt="문제 해결 중심 사고 아이콘" class="strength-icon">
+              <h3>02. 문제 해결 중심 사고</h3>
+              <p>사용자의 불편함을 기준으로 문제를 정의하고, 이를 <br>
+              개선하는 방향으로 디자인과 퍼블리싱을 진행합니다.</p>
+            </article>
+            <article class="strength-card">
+              <img src="./assets/images/strength-icon3.svg" alt="협업 및 소통 아이콘" class="strength-icon">
+              <h3>03. 협업 및 소통</h3>
+              <p>디자인과 개발 과정에서의 원활한 소통을 바탕으로 <br>
+              다양한 의견을 수용하고 결과물에 반영합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section class="contact sec-pd">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+          <div class="contact-texts">
+          <h2 class="contact-title">Contact</h2>
+            <p>함께 일할 기회를 기다리고 있겠습니다.</p>
+            <p>편하게 연락주세요!</p>
+          </div>
+          <div class="contact-info">
+            <div class="email-wrap">
+              <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.25 2.45833V17.0417C27.25 17.4284 27.0964 17.7994 26.8229 18.0729C26.5494 18.3464 26.1784 18.5 25.7917 18.5H2.45833C2.07156 18.5 1.70063 18.3464 1.42714 18.0729C1.15365 17.7994 1 17.4284 1 17.0417V2.45833M27.25 2.45833C27.25 2.07156 27.0964 1.70063 26.8229 1.42714C26.5494 1.15365 26.1784 1 25.7917 1H2.45833C2.07156 1 1.70063 1.15365 1.42714 1.42714C1.15365 1.70063 1 2.07156 1 2.45833M27.25 2.45833L15.9917 11.8398C15.4676 12.2763 14.8071 12.5154 14.125 12.5154C13.4429 12.5154 12.7824 12.2763 12.2583 11.8398L1 2.45833" stroke="#1F1840" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              <a href="mailto:ayeong0377@gmail.com">ayeong0377@gamail.com</a>
+            </div>
+            <a href="mailto:ayeong0377@gmail.com" class="contact-cta">메일 보내기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>©copyright Ayeong Bae. All Right Reserved.</p>
+        <p>해당 사이트는 상업적 용도가 아닌 포트폴리오 용도 사이트로 제작되었습니다.</p>
+      </div>
+    </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/js/header.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+     // AOS 초기화
+        AOS.init();
+  </script>
+</body>
+</html>

@@ -22,10 +22,10 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1.25rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
 /* ===== section 간격 공통 ===== */
