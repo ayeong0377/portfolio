@@ -10,7 +10,7 @@ a {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 body {
@@ -70,8 +70,8 @@ body {
 }
 
 .main-title {
-    white-space: pre-line;
-    text-align: center;
+  white-space: pre-line;
+  text-align: center;
   color: #FFFFFF;
   font-size: 3.75rem; /* 60px */
   font-weight: 400;
@@ -252,6 +252,7 @@ body {
 .project-section {
   background: #1E4DB4;
   width: 100%;
+  position: relative;
 }
 .project-section .container {
   display: flex;
@@ -266,33 +267,87 @@ body {
   text-align: center;
   color: #fff;
 }
-.project-list {
+.project-swiper-wrap {
+  position: relative;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  padding: 0 1rem;
 }
+
+.project-swiper {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 .project-card {
+  width: 100%;
+  max-width: 390px;
   background: #fff;
   border-radius: 1.5rem;
   box-shadow: 0 2px 16px rgba(30,77,180,0.10);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.25rem;
+  padding: 1.5rem;
   color: #1F1840;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s;
 }
 
 .project-card a {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(30,77,180,0.18);
+}
+
+.project-button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid rgba(255,255,255,0.75);
+  border-radius: 0.75rem;
+  background: rgba(255,255,255,0.40);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(50%);
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  padding: 0.625rem;
+}
+
+.project-button-prev {
+  left: 10%;
+}
+
+.project-button-next {
+  right: 10%;
+}
+
+.project-button span {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.project-button-prev span {
+  transform: rotate(-135deg);
+}
+
+.project-button-next span {
+  transform: rotate(45deg);
 }
 .project-card-img {
   width: 100%;
@@ -419,9 +474,70 @@ margin-bottom: 1rem;
 
 /* ===== 반응형 ===== */
 @media (max-width: 1000px) {
-  .project-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  .project-swiper {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image,
+  .about-texts {
+    width: 100%;
+  }
+
+  .about-texts {
+    text-align: left;
+    max-width: 48rem;
+  }
+
+  /* skill-license */
+  .skill-card {
+    width: calc((100% - 16px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-section .container {
+    padding: 0 0.5rem;
+  }
+
+  .project-button {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .project-button {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-swiper-wrap {
+    padding: 0;
+  }
+}
+
+@media (max-width: 514px) {
+  .project-button {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
@@ -454,6 +570,13 @@ margin-bottom: 1rem;
     padding: 1.2rem 1.5rem;
     min-width: 90px;
     font-size: 1rem;
+  }
+}
+
+@media(max-width:768px){
+  .sec-pd {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
   }
 }
 
@@ -498,11 +621,6 @@ margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
-  .sec-pd {
-    padding-top: 6.25rem; /* 150px */
-    padding-bottom: 6.25rem;
-  }
-
   /* kv */
   .main-title {
     font-size: 2rem;
@@ -523,8 +641,8 @@ margin-bottom: 1rem;
     align-items: stretch;
   }
 
-  .project-list {
-    grid-template-columns: 1fr;
+  .project-swiper {
+    padding: 0.75rem 0;
   }
 
   .project-card {

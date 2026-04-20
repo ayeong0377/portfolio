@@ -43,7 +43,7 @@ body {
 .about-title {
   font-family: "Shrikhand", serif;
   font-size: 2.5rem; /* 40px */
-  font-weight: 400;
+  font-weight: 300;
   color: #1E4DB4;
   text-align: center;
   margin-bottom: 3.75rem; /* 60px */
@@ -91,29 +91,43 @@ body {
 .strength-title {
   font-family: "Shrikhand", serif;
   font-size: 2.5rem; /* 40px */
-  font-weight: 400;
+  font-weight: 300;
   color: #ffffff;
   text-align: center;
   margin-bottom: 3.75rem; /* 60px */
 }
 
 .strength-cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   gap: 1rem; /* 16px */
 }
 
 .strength-card {
+  width: calc((100% - 32px) / 3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 25rem;
+    color: #1F1840;
   background: #ffffff;
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 0.625rem;
   border-radius: 1.25rem;
   text-align: center;
   min-height: 100%;
+}
+
+.strength-card:hover {
+  color: #1E4DB4;
+}
+
+.strength-card:hover .strength-icon path {
+  fill: #1E4DB4;
+}
+
+.strength-card:last-child:hover path {
+  fill: none;
+  stroke: #1E4DB4;
 }
 
 .strength-icon {
@@ -127,13 +141,174 @@ body {
   font-size: 1.5625rem; /* 25px */
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #1F1840;
 }
 
 .strength-card p {
   font-size: 1.25rem; /* 20px */
   line-height: 1.75;
+}
+
+/* skill-license */
+.skill-license {
+  width: 100%;
+  background: #fff;
+}
+
+.skill-license.sec-pd {
+  padding-bottom: 0;
+}
+
+.skill-license-title {
+  font-family: "Shrikhand", serif;
+  font-size: 2.5rem; /* 40px */
+  font-weight: 300;
+  color: #1E4DB4;
+  margin-bottom: 3.75rem; /* 60px */
+  text-align: center;
+}
+
+.skill-subtitle,
+.license-subtitle {
+  font-family: "Shrikhand", serif;
+  font-size: 1.875rem; /* 30px */
+  font-weight: 300;
+  margin: 0 0 2.5rem; /* 40px */
   color: #1F1840;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-card {
+  width: calc((100% - 32px) / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 1.25rem 0.625rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  border: 1px solid #1F1840;
+}
+
+.skill-card-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-card-head img {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+}
+
+.skill-card-icon-wrap {
+  display: flex;
+  gap: 1rem;
+}
+
+.skill-card h4 {
+  font-size: 1.5625rem; /* 25px */
+  font-weight: 700;
+  margin: 0;
+  color: #1F1840;
+}
+
+.skill-card p {
+  font-size: 1.25rem; /* 20px */
+  margin: 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.license {
+  margin-top: 3.75rem;
+  text-align: left;
+}
+
+.license-list {
+  display: table;
+}
+
+.license-item {
+  padding: 0 1.5rem;
+  font-size: 1.25rem;
+  background: #fff;
+  list-style: disc;
+  margin-left: 2.5rem;
+}
+
+/* experience */
+.experience {
+  width: 100%;
+  background: #fff;
+}
+
+.experience.sec-pd {
+  padding-bottom: 0;
+}
+
+.experience-title {
+  font-family: "Shrikhand", serif;
+  font-size: 2.5rem; /* 40px */
+  color: #1E4DB4;
+  margin-bottom: 3.75rem; /* 60px */
+  text-align: left;
+  font-weight: 300;
+}
+
+.experience-wrap {
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}
+
+.experience-education {
+  width: 60%;
+}
+
+.experience-career {
+  width: 40%;
+}
+
+.experience-subtitle {
+  font-family: "Shrikhand", serif;
+  font-size: 1.875rem; /* 30px */
+  font-weight: 300;
+  color: #1F1840;
+  margin-bottom: 2.5rem; /* 40px */
+  border-bottom: 2px solid #1F1840;
+  display: inline-block;
+}
+
+.experience-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exp-date {
+  display: block;
+  font-size: 1.25rem; /* 20px */
+  color: #1F1840;
+  font-weight: 600;
+}
+
+.exp-desc {
+  display: block;
+  font-size: 1.25rem; /* 20px */
+  color: #1F1840;
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* contact */
@@ -225,6 +400,7 @@ body {
 
 /* ===== 반응형 ===== */
 @media (max-width: 1000px) {
+  /* about */
   .about-title,
   .strength-title {
     margin-bottom: 3rem;
@@ -238,12 +414,19 @@ body {
     font-size: 1.0625rem;
   }
 
+  /* strength */
   .strength-cards {
     gap: 0.75rem;
+  }
+
+  /* skill-license */
+  .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 900px) {
+  /* about */
   .about-content {
     flex-direction: column;
     align-items: center;
@@ -259,16 +442,25 @@ body {
     max-width: 48rem;
   }
 
-  .strength-cards {
-    grid-template-columns: 1fr;
+  /* skill-license */
+  .skill-card {
+    width: calc((100% - 16px) / 2);
   }
 
-  .strength-card {
-    text-align: left;
+  /* experience */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .sec-pd {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  /* about */
   .about-title,
   .strength-title,
   .contact-title {
@@ -282,74 +474,177 @@ body {
 
   .about-texts p,
   .strength-card p {
-    font-size: 1rem;
+    font-size: 1.125rem;
+  }
+  
+  /* strength */
+  .strength-cards {
+    flex-direction: column;
+  }
+
+  .strength-card {
+    width: 100%;
+    height: 18.75rem;
+    padding: 1.25rem;
   }
 
   .strength-card h3 {
     font-size: 1.4375rem;
   }
 
-  /* contact */
-  .contact-texts p {
+  /* skill-license */
+  .skill-license-title {
+    margin-bottom: 2.5rem; /* 40px */
+    font-size: 2.25rem;
+  }
+
+  .skill-subtitle, .license-subtitle {
     font-size: 1.5625rem;
   }
 
-  .contact-texts p + p {
+  .skill-card {
+    padding: 1.25rem;
+  }
+
+  .skill-card h4 {
+    font-size: 1.25rem;
+  }
+
+  .skill-card p {
+    font-size: 1.125rem;
+  }
+
+  .skill-card-head img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .license-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .license-item {
+    font-size: 1.125rem;;
+  }
+
+  /* experience */
+  .experience-title {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-subtitle {
     font-size: 1.5625rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .exp-date,
+  .exp-desc {
+    font-size: 1.125rem;
+  }
+
+  .experience-items {
+    gap: 1.5rem;
+  }
+
+  /* contact */
+  .contact-texts p {
+    font-size: 1.25rem;
+  }
+
+  .contact-texts p + p {
+    font-size: 1.25rem;
   }
 
   .contact-info {
     gap: 12px;
+    margin-top: 2.5rem;
   }
+
 }
 
 @media (max-width: 600px) {
-  .sec-pd {
-    padding-top: 6.25rem; /* 150px */
-    padding-bottom: 6.25rem;
-  }
-
   .about-content {
     padding: 0 0.5rem;
   }
 
-  .strength-card {
-    padding: 2rem 1rem;
+  /* skill-license */
+  .skill-card {
+    width: 100%;
+  }
+
+  /* experience */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 514px) {
   .about-title,
   .strength-title,
-  .contact-title {
+  .contact-title,
+  .skill-license-title {
     font-size: 2rem;
   }
-
-  .about-texts p,
-  .strength-card p {
-    font-size: 0.9375rem;
-    line-height: 1.6;
-  }
-
+  
   .about-content {
     gap: 1rem;
   }
 
-  .strength-card h3 {
+  .about-texts p,
+  .strength-card p,
+  .skill-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .skill-subtitle,
+  .license-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .strength-card h3,
+  .skill-card h4 {
     font-size: 1.375rem;
   }
 
-  .strength-card {
-    padding: 1.75rem 1rem;
-    height: 18.75rem;
+  /* skill-license */
+  .license-item {
+    font-size: 1rem;
+  }
+
+  /* experience */
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exp-date,
+  .exp-desc {
+    font-size: 1rem;
+  }
+
+  .experience-items {
+    gap: 1.25rem;
   }
 
   /* contact */
   .contact-texts p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .contact-texts p + p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
+
+  .contact-info a {
+    font-size: 1.125rem;
+  }
+
 }
