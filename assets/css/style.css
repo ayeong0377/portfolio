@@ -38,499 +38,250 @@ body {
 .kv-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: #2B6ED3;
 }
 
 .kv-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2.5rem; /* 40px */
+  overflow: hidden;
 }
 
 .main-title-box {
-  width: 0%;
-  max-width: 28rem; /* 448px */
-  border-radius: 1.5rem;
-  background: linear-gradient(135deg, #FF9799 0%, #1E4DB4 100%);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: width 1.5s ease;
-  overflow: hidden;
-}
-
-.main-title-box.active {
-  width: 100%;
-}
-
-.title-inner {
-    padding: 1.5625rem 5rem;
+  /* align-items: center; */
+  gap: 32.125rem;
+  color: #fff;
+  text-align: left;
+  padding-top: 11.25rem;
 }
 
 .main-title {
-  white-space: pre-line;
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 3.75rem; /* 60px */
-  font-weight: 400;
-  font-family: "Shrikhand", serif;
-  width: max-content;
-  
-}
-.sub-text {
-  color: #1F1840;
-  font-size: 1.25rem; /* 20px */
-  margin-top: 3.75rem; /* 20px */
-  font-weight: 400;
+  font-size: 6.875rem; /* 110px */
+  font-weight: 600;
+  font-family: "Brygada 1918", serif;
+  line-height: 1.1;
+  position: relative;
+  z-index: 44;
 }
 
-.sub-text strong {
-  color: #1E4DB4;
-}
-
-/* ===== about 영역 ===== */
-.about-section {
-  width: 100%;
-  padding: 9.375rem 1.25rem;
-  background: #fff;
-}
-.about-top {
-  max-width: 928px;
-  margin: 0 auto;
-}
-
-.about-top {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-bottom: 5rem;
-   border-radius: 0.937rem;
-   border: 1px solid #ccc;
-    overflow: hidden;
-    /* ...기존 스타일... */
-  animation: floatY 2.8s ease-in-out infinite;
-}
-
-@keyframes floatY {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-18px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.about-info {
-  flex: 1;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  padding: 2.5rem 2rem;
-  font-size: 1.1rem;
-  text-align: left;
-}
-
-.about-info li {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-.about-info li b {
-  font-weight: 700;
-  color: #1E4DB4;
-}
-.about-img {
-  width: 40%;
-  min-height: 25rem;
-  background: #aaa;
-}
-
-.about-img img {
+.main-title::before {
+  content: "";
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 1.875rem; /* 30px */
+  background-color: #FF9ABF;
+  position: absolute;
+  top: 13.125rem;
+  z-index: -1;
 }
 
-.about-bottom {
-  margin-top: 5rem;
-}
-.about-title {
-  font-family: 'Shrikhand', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #1E4DB4;
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-.about-desc-wrap {
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-  justify-content: center;
-}
-.about-desc-img {
-  width: 40%;
-  height: 28.125rem;
-  background: #ccc;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-.about-desc-text {
-  flex: 1;
-  text-align: left;
-  font-size: 1.25rem;
-}
-.about-more {
-  display: inline-block;
-  margin-top: 1.5rem;
-  color: #1E4DB4;
-  font-weight: 700;
-  border-bottom: 2px solid #1E4DB4;
-  font-size: 1.25rem;
-  transition: color 0.2s, border-color 0.2s;
-}
-.about-more:hover {
-  color: #FF9799;
-  border-color: #FF9799;
+.main-sub-title {
+  font-size: 1.5rem;
 }
 
-/* ===== skill 영역 ===== */
-.skill-section {
-  background: linear-gradient(135deg, #eaf1fb 0%, #f9f9fb 100%);
-  width: 100%;
-}
-.skill-section .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.skill-title {
-  font-family: 'Shrikhand', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #1E4DB4;
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-.skill-desc {
-  font-size: 1.25rem; /* 20px */
-  color: #1F1840;
-  margin-bottom: 3.75rem;;
-  text-align: center;
-}
-.skill-list {
+.sub-text-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-.skill-item {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(30,77,180,0.07);
-  padding: 2rem 2.5rem;
-  font-size: 1.25rem;
-  color: #1E4DB4;
-  font-weight: 600;
-  min-width: 120px;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.skill-item:hover {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(30,77,180,0.13);
-}
-
-/* ===== project 영역 ===== */
-.project-section {
-  background: #1E4DB4;
-  width: 100%;
-  position: relative;
-}
-.project-section .container {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.project-title {
-  font-family: 'Shrikhand', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 3.75rem;
-  text-align: center;
-  color: #fff;
-}
-.project-swiper-wrap {
-  position: relative;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.project-swiper {
-  width: 100%;
-  padding: 1rem 0;
-}
-
-.swiper-slide {
-  display: flex;
+  gap: 3.75rem; /* 60px */
   justify-content: center;
-}
-
-.project-card {
-  width: 100%;
-  /* max-width: 390px; */
-  height: 25.625rem;
-  background: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 16px rgba(30,77,180,0.10);
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 1.25rem;
-  color: #1F1840;
-  transition: transform 0.2s;
-}
-
-.project-card a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.project-card:hover {
-  transform: translateY(-10px) scale(1.03);
-}
-
-.project-button {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  width: 3.5rem;
-  height: 3.5rem;
-  border: 1px solid rgba(255,255,255,0.75);
-  border-radius: 0.75rem;
-  background: rgba(255,255,255,0.40);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(50%);
-  cursor: pointer;
-  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
-  padding: 0.625rem;
-  z-index: 3;
-}
-
-.project-button-prev {
-  left: 10%;
-}
-
-.project-button-next {
-  right: 10%;
-}
-
-.project-button span {
-  display: block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-}
-
-.project-button-prev span {
-  transform: rotate(-135deg);
-}
-
-.project-button-next span {
-  transform: rotate(45deg);
-}
-.project-card-img {
-  width: 100%;
-  height: 12.5rem;
-  background: #eaf1fb;
-  border-radius: 1rem;
-  margin-bottom: 1.25rem;
+  margin-top: 7.5rem;
+  font-size: 1.875rem; /* 30px */
+  color: #E2F3FF;
+  white-space: nowrap;
   overflow: hidden;
 }
 
-.project-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.sub-text-track {
+  display: inline-flex;
+  animation: text-flow 20s linear infinite;
 }
 
 
-.project-card-main {
-  font-size: 1.5625rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
+.sub-text-wrap span {
+  padding-right: 3.75rem
 }
 
-.project-card-tags {
-  font-size: 1.25rem;
-  margin-bottom: 1.25rem;
+@keyframes text-flow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
 }
 
-.more-btn {
-  text-align: center;
-  display: block;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1E4DB4;
+/* ===== about-section ===== */
+.about-section {
+  background-color: #09172C;
 }
 
-/* contact */
-.contact {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .container {
+.about-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 3.75rem; /* 60px */
+  margin-bottom: 9.375rem; /* 150px */
+  align-items: flex-start;
 }
 
-.contact-title {
-  font-family: "Shrikhand", serif;
-  font-size: 2.5rem;
+.about-left {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2rem; /* 32px */
+  color: #fff;
+  text-align: left;
+  margin-bottom: 1.5rem; /* 24px */
+  line-height: 1.4;
   font-weight: 400;
-  color: #1E4DB4;
-  text-align: center;
-  margin-bottom: 3.75rem;
 }
 
-.contact-texts {
+.about-title strong {
+  font-weight: 700;
+}
+
+.about-desc {
+  font-size: 1.5rem; /* 24px */
+  color: #fff;
+  text-align: left;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.about-desc strong {
+  font-weight: 700;
+}
+
+.about-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 2.5rem; /* 40px */
 }
 
-.contact-texts p {
-  font-size: 1.875rem;
-  color: #1F1840;
+.about-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
 }
 
-.contact-texts p + p {
-  font-size: 1.875rem;
-  margin-top: 20px;
+.about-text-item {
+  font-size: 1.5rem; /* 24px */
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: left;
 }
 
-.contact-info {
-  margin-top: 60px;
+.about-text-item strong {
+  font-weight: 700;
 }
 
-.email-wrap {
+/* ===== skill-wrapper ===== */
+.skill-wrapper {
+  margin-top: 6.25rem; /* 100px */
+}
+
+.skill-main-title {
+  font-size: 1.875rem; /* 30px */
+  color: #fff;
+  text-align: left;
+  margin-bottom: 3.125rem; /* 50px */
+  font-family: "Brygada 1918", serif;
+  letter-spacing: 10%;
+  font-weight: 400;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.75rem; /* 60px */
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  gap: 0.75rem; /* 12px */
+  margin-bottom: 1.25rem; /* 20px */
 }
 
-.email-wrap:hover a {
-  color: #1E4DB4;
-}
-
-.email-wrap:hover path {
-  stroke: #1E4DB4;
-}
-
-.contact-info img {
-  width: 24px;
-  height: 24px;
+.skill-icon {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem;
+  flex-shrink: 0;
   display: block;
 }
 
-.contact-info a {
-  font-size: 1.25rem;
-  color: #1F1840;
-  font-weight: 500;
+.skill-category-title {
+  font-size: 1.25rem; /* 20px */
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Brygada 1918", serif;
+  letter-spacing: 10%;
+  font-weight: 400;
+  margin-top: 0.9375rem; /* 15px */
+  padding-bottom: 0.3125rem; /* 5px */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  flex: 1;
 }
 
-.contact-cta {
-  font-size: 1.25rem;
-  font-weight: 700;
-  display: inline-block;
-  margin-top: 40px;
-  border: 1px solid #1F1840;
-  padding: 10px 30px;
-  border-radius: 6.25rem;
-  color: #1F1840;
-  transition: transform 0.3s ease;
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
 }
 
-.contact-cta:hover {
-  background-color: #1F1840;
-  color: #ffffff;
-  transform: translateY(-0.25rem);
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /* 10px */
+  font-size: 1.5rem; /* 24px */
+  color: #fff;
+  font-family: "Brygada 1918", serif;
+  font-weight: 400;
 }
 
+.skill-item-icon {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem;
+  flex-shrink: 0;
+  display: block;
+}
 
 /* ===== 반응형 ===== */
 @media (max-width: 1000px) {
-  .project-swiper {
-    padding: 1rem 0;
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .about-right {
+    flex-direction: row;
+  }
+
+  .about-text-box {
+    flex: 1;
   }
 }
 
 @media (max-width: 900px) {
-    /* kv */
-  .main-title-box {
-    max-width: 20rem;
-  }
 
-  /* about */
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image,
-  .about-texts {
-    width: 100%;
-  }
   
-  .about-top, .about-desc-wrap {
-    flex-direction: column;
-    align-items: stretch;
-  }
 
-  .about-info {
-    padding: 1.25rem 2rem;
-  }
-
-  .about-img, .about-desc-img {
-    width: 100%;
-    height: 250px;
-    border-radius: 1rem;
-  }
-
-  .about-texts {
-    text-align: left;
-    max-width: 48rem;
-  }
-
-  /* skill-license */
-  .skill-card {
-    width: calc((100% - 16px) / 2);
-  }
-
-  .skill-list {
-    gap: 1rem;
-  }
-  .skill-item {
-    padding: 1.2rem 1.5rem;
-    min-width: 90px;
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -548,94 +299,42 @@ body {
     margin-top: 2.5rem;
   }
 
-  /* skill */
-  .skill-desc {
-    margin-bottom: 2.5rem;
+  /* about */
+  .about-title {
+    font-size: 1.5rem;
   }
 
-  /* project */
-  .project-title {
-    margin-bottom: 2.5rem;
-  }
-
-  .project-section .container {
-    padding: 0 0.5rem;
-  }
-  
-  .project-swiper-wrap {
-    padding: 0;
-  }
-  
-  .project-card {
-    height: auto;
-  }
-  
-  .project-card-img {
-    height: 18.75rem;
-  }
-
-  .project-button {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  /* contact */
-  .contact-title {
-    margin-bottom: 2.5rem;
-  }
-
-  .contact-texts p {
+  .about-desc {
     font-size: 1.25rem;
   }
 
-  .contact-texts p + p {
+  .about-text-item {
+    font-size: 1.125rem;
+  }
+
+  .skill-main-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-category-title {
+    font-size: 1.125rem;
+  }
+
+  .skill-item {
     font-size: 1.25rem;
   }
 
-  .contact-info {
-    gap: 12px;
-    margin-top: 2.5rem;
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-right {
+    flex-direction: column;
   }
 }
 
 @media (max-width: 700px) {
-  /* about */
-  .skill-desc {
-    margin-bottom: 2.5rem;
-  }
-
-  /* project */
-  .project-card {
-    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
-  }
-  .project-title {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-  }
-  .project-card-main {
-    font-size: 1.25rem;
-  }
-  .project-card-sub {
-    font-size: 1rem;
-  }
-
-  /* contact */
-  .contact-title {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .contact-texts p {
-    font-size: 1.5625rem;
-  }
-
-  .contact-texts p + p {
-    font-size: 1.5625rem;
-  }
-
-  .contact-info {
-    gap: 12px;
-  }
+  
 }
 
 @media (max-width: 600px) {
@@ -647,19 +346,28 @@ body {
     max-width: 90vw;
   }
 
-  /* project */
-  .project-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .about-title {
+    font-size: 1.25rem;
   }
 
-  .project-card {
-    padding: 1.25rem;
+  .about-desc {
+    font-size: 1rem;
   }
 
-  .project-button {
-    width: 2.75rem;
-    height: 2.75rem;
+  .about-text-item {
+    font-size: 1rem;
+  }
+
+  .skill-main-title {
+    font-size: 1.25rem;
+  }
+
+  .skill-category-title {
+    font-size: 1rem;
+  }
+
+  .skill-item {
+    font-size: 1rem;
   }
 }
 
@@ -673,57 +381,27 @@ body {
     font-size: 1.125rem;
   }
 
-  /* about */
-  .about-info li {
+  .about-title {
     font-size: 1.125rem;
   }
 
-  .about-desc-text {
-    font-size: 1.15rem;
+  .about-desc {
+    font-size: 0.875rem;
   }
 
-  .about-more {
+  .about-text-item {
+    font-size: 0.875rem;
+  }
+
+  .skill-main-title {
     font-size: 1.125rem;
   }
 
-  /* skill */
-  .skill-desc {
-    font-size: 1.125rem;
+  .skill-category-title {
+    font-size: 0.875rem;
   }
 
-  /* project */
-  .project-section .container {
-    align-items: stretch;
-  }
-
-  .project-swiper {
-    padding: 0.75rem 0;
-  }
-
-  .project-card {
-    width: 100%;
-    padding: 1.25rem;
-  }
-
-  .project-card-img {
-    height: 15.625rem;
-  }
-
-  .project-card-tags {
-    font-size: 1.125rem;
-  }
-
-  .project-button {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  /* contact */
-  .contact-texts p {
-    font-size: 1.25rem;
-  }
-
-  .contact-texts p + p {
-    font-size: 1.25rem;
+  .skill-item {
+    font-size: 0.875rem;
   }
 }

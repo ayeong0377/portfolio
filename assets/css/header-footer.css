@@ -5,6 +5,8 @@
   top: 0;
   z-index: 10;
   padding: 1.875rem 0;
+  font-family: "Brygada 1918", serif;
+  color: #fff;
 }
 
 .header.scrolled {
@@ -29,7 +31,6 @@
 .logo {
   font-size: 2rem;
   font-weight: 700;
-  color: #1E4DB4;
   letter-spacing: 5%;
 }
 .nav-menu {
@@ -48,7 +49,7 @@
   transition: color 0.2s;
 }
 .nav-menu li a:hover {
-  color: #1E4DB4;
+  color: #FF9ABF;
 }
 .nav-toggle {
   display: none;
