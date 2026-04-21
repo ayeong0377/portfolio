@@ -3,7 +3,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   padding: 1.875rem 0;
   font-family: "Brygada 1918", serif;
   color: #fff;
@@ -11,6 +11,7 @@
 
 .header.scrolled {
   background: #fff;
+  color: #09172C;
   box-shadow: 0 2px 8px rgba(30,77,180,0.04);
 }
 
@@ -44,7 +45,7 @@
 .nav-menu li a {
   display: block;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -66,7 +67,7 @@
   display: block;
   width: 2rem;
   height: 0.25rem;
-  background: #1E4DB4;
+  background: #2B6ED3;
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -78,7 +79,7 @@
   right: -100vw;
   width: 100vw;
   height: 100vh;
-  background: #1E4DB4;
+  background: #2B6ED3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,7 +119,7 @@
 /* footer */
 footer {
   width: 100%;
-  background-color: #1F1840;
+  background-color: #2B6ED3;
   padding: 40px 20px;
   font-size: 18px;
   text-align: center;
