@@ -72,6 +72,10 @@
   transition: all 0.3s;
 }
 
+.nav-toggle.scrolled span {
+  background: #09172C;
+}
+
 /* ===== 모바일 메뉴 ===== */
 .mobile-menu {
   position: fixed;

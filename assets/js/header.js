@@ -24,11 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 스크롤 시 메뉴 배경색 변경
   const mainNav = document.querySelector('.header');
+  const monav = document.querySelector('.nav-toggle')
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       mainNav.classList.add('scrolled');
+      monav.classList.add('scrolled');
     } else {
       mainNav.classList.remove('scrolled');
+      monav.classList.remove('scrolled');
     }
   });
 });
